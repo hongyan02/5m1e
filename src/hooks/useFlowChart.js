@@ -5,11 +5,11 @@ import axios from 'axios';
 const mockResponse = {
   productLine: '产线A',
   nodes: [
-    { id: 'start', label: '开始', type: 'start', x: 100, y: 100 },
-    { id: 'step1', label: '上料', type: 'process', x: 250, y: 100 },
-    { id: 'step2', label: '焊接', type: 'process', x: 400, y: 100 },
-    { id: 'step3', label: '下料', type: 'process', x: 550, y: 100 },
-    { id: 'end', label: '完成', type: 'end', x: 700, y: 100 }
+    { id: '正极搅拌', label: '开始', type: 'start', x: 100, y: 100 },
+    { id: '正极底涂', label: '上料', type: 'process', x: 250, y: 100 },
+    { id: '陶瓷搅拌', label: '焊接', type: 'process', x: 400, y: 100 },
+    { id: '底涂搅拌', label: '下料', type: 'process', x: 550, y: 100 },
+    { id: '正极辊分', label: '完成', type: 'end', x: 700, y: 100 }
   ],
   edges: [
     { source: 'start', target: 'step1' },

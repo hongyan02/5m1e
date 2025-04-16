@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Layout, Input, Button, Space, Typography, Alert, Row, Col } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import './MainLayout.css';
-import useFlowChart from '../hook/useFlowChart';
+import useFlowChart from '../hooks/useFlowChart'; 
 import useSvgInteraction from '../hooks/useSvgInteraction';
 import RectInfoModal from './RectInfoModal';
 
@@ -26,7 +26,7 @@ const MainLayout = ({ children }) => {
         <div className="header-container">
           <Row gutter={[0, 16]} align="middle">
             <Col span={24}>
-              <Text style={{ fontSize: '20px', color: '#000' }}>电芯生产流程追踪系统</Text>
+              <Text style={{ fontSize: '20px', color: '#000' }}>电芯生产流程追踪</Text>
             </Col>
             <Col span={24}>
               <Space size="middle" style={{ height: '32px' }}>
@@ -61,7 +61,7 @@ const MainLayout = ({ children }) => {
             justifyContent: 'center',
             alignItems: 'flex-start',
             overflow: 'auto',
-            padding: 0
+            padding: 20,
           }}>
             <object 
               data={process.env.PUBLIC_URL + "/123.svg"} 

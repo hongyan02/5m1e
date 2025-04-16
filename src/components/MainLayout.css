@@ -22,7 +22,7 @@
 }
 
 .main-content {
-  margin-top: 16px;  /* 减小与header的间距 */
+  /* margin-top: 16px;  减小与header的间距 */
   padding: 24px;
   background: #f0f2f5;
 }

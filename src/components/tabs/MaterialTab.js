@@ -3,7 +3,7 @@ import { Card } from 'antd';
 
 const MaterialTab = () => {
   return (
-    <Card title="物料信息">
+    <Card>
       <p>物料名称: 未设置</p>
       <p>物料编号: 未设置</p>
       <p>库存状态: 未设置</p>

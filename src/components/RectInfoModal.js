@@ -55,10 +55,12 @@ const RectInfoModal = ({ selectedRect, setSelectedRect }) => {
         margin: 0, 
         maxWidth: '100vw' 
       }}
-      bodyStyle={{ 
-        height: 'calc(100vh - 55px)', 
-        padding: '12px', 
-        overflow: 'auto' 
+      styles={{ 
+        body: { 
+          height: 'calc(100vh - 55px)', 
+          padding: '12px', 
+          overflow: 'auto' 
+        }
       }}
       footer={null}
       centered={false}
