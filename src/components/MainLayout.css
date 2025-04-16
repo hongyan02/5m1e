@@ -1,0 +1,35 @@
+.main-layout {
+  min-height: 100vh;
+}
+
+.main-header {
+  background: #fff;
+  line-height: normal;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1890ff;
+  margin-right: 48px;
+}
+
+.main-content {
+  margin-top: 16px;  /* 减小与header的间距 */
+  padding: 24px;
+  background: #f0f2f5;
+}
+
+.content-container {
+  background: #fff;
+  padding: 24px;
+  min-height: calc(100vh - 112px);
+  border-radius: 4px;
+}

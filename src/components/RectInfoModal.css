@@ -1,0 +1,16 @@
+.fullscreen-modal .ant-modal {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  top: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.fullscreen-modal .ant-modal-content {
+  height: 100vh;
+  border-radius: 0;
+}
+
+.fullscreen-modal .ant-modal-header {
+  border-radius: 0;
+}

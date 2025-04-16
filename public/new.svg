@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1100 900"
+   version="1.1"
+   id="svg92"
+   sodipodi:docname="new.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   width="1100"
+   height="900"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs92">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <rect
+       x="774.81958"
+       y="799.54786"
+       width="182.71455"
+       height="63.194504"
+       id="rect11" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview92"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4262494"
+     inkscape:cx="344.96069"
+     inkscape:cy="437.51113"
+     inkscape:window-width="1472"
+     inkscape:window-height="919"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg92"
+     showguides="true">
+    <sodipodi:guide
+       position="-319.77784,-209.0477"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     transform="translate(-295.31908,-201.5021)"
+     id="g31">
+    <rect
+       x="493.70499"
+       y="211.789"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="zj" />
+    <text
+       x="553.70502"
+       y="236.789"
+       text-anchor="middle"
+       font-size="12px"
+       id="text19">正极搅拌</text>
+    <rect
+       x="711.336"
+       y="211.789"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="zt" />
+    <text
+       x="771.336"
+       y="236.789"
+       text-anchor="middle"
+       font-size="12px"
+       id="text20">正极涂布</text>
+    <rect
+       x="928.966"
+       y="211.789"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="zg" />
+    <text
+       x="988.966"
+       y="236.789"
+       text-anchor="middle"
+       font-size="12px"
+       id="text21">正极辊分</text>
+    <rect
+       x="602.52002"
+       y="262.59698"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="dt" />
+    <text
+       x="662.52002"
+       y="287.59698"
+       text-anchor="middle"
+       font-size="12px"
+       id="text22">底涂搅拌</text>
+    <rect
+       x="820.151"
+       y="262.59698"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="tt" />
+    <text
+       x="880.151"
+       y="287.59698"
+       text-anchor="middle"
+       font-size="12px"
+       id="text23">陶瓷搅拌</text>
+    <rect
+       x="493.70499"
+       y="313.40601"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="fj" />
+    <text
+       x="553.70502"
+       y="338.40601"
+       text-anchor="middle"
+       font-size="12px"
+       id="text24">负极搅拌</text>
+    <rect
+       x="711.336"
+       y="313.40601"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="ft" />
+    <text
+       x="771.336"
+       y="338.40601"
+       text-anchor="middle"
+       font-size="12px"
+       id="text25">负极涂布</text>
+    <rect
+       x="928.966"
+       y="313.40601"
+       width="120"
+       height="40"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="1"
+       id="fg" />
+    <text
+       x="988.966"
+       y="338.40601"
+       text-anchor="middle"
+       font-size="12px"
+       id="text26">负极辊分</text>
+    <line
+       x1="613.70502"
+       y1="231.789"
+       x2="711.336"
+       y2="231.789"
+       stroke="#000000"
+       stroke-width="1"
+       id="path26" />
+    <polygon
+       points="701.336,226.789 711.336,231.789 701.336,236.789 "
+       fill="#000000"
+       id="polygon26" />
+    <line
+       x1="831.336"
+       y1="231.789"
+       x2="928.966"
+       y2="231.789"
+       stroke="#000000"
+       stroke-width="1"
+       id="path27" />
+    <polygon
+       points="918.966,226.789 928.966,231.789 918.966,236.789 "
+       fill="#000000"
+       id="polygon27" />
+    <line
+       x1="613.70502"
+       y1="333.40601"
+       x2="711.336"
+       y2="333.40601"
+       stroke="#000000"
+       stroke-width="1"
+       id="path28" />
+    <polygon
+       points="701.336,328.406 711.336,333.406 701.336,338.406 "
+       fill="#000000"
+       id="polygon28" />
+    <line
+       x1="831.336"
+       y1="333.40601"
+       x2="928.966"
+       y2="333.40601"
+       stroke="#000000"
+       stroke-width="1"
+       id="path29" />
+    <polygon
+       points="918.966,328.406 928.966,333.406 918.966,338.406 "
+       fill="#000000"
+       id="polygon29" />
+    <path
+       d="m 662.52,262.597 v -10.808 h 48.816"
+       stroke="#000000"
+       stroke-width="1"
+       fill="none"
+       id="path30" />
+    <polygon
+       points="701.336,246.789 711.336,251.789 701.336,256.789 "
+       fill="#000000"
+       id="polygon30" />
+    <path
+       d="M 880.151,262.597 V 251.789 H 831.336"
+       stroke="#000000"
+       stroke-width="1"
+       fill="none"
+       id="path31" />
+    <polygon
+       points="841.336,246.789 831.336,251.789 841.336,256.789 "
+       fill="#000000"
+       id="polygon31" />
+    <line
+       x1="1048.9623"
+       y1="335.21649"
+       x2="1146.5923"
+       y2="335.21649"
+       stroke="#000000"
+       stroke-width="1"
+       id="path29-8"
+       inkscape:transform-center-x="2.9184001"
+       inkscape:transform-center-y="-1.4592001" />
+    <path
+       d="M 1157.639,244.69121 V 234.11048 H 1052.1424"
+       stroke="#000000"
+       stroke-width="1.45455"
+       fill="none"
+       id="path31-3" />
+  </g>
+  <variable
+     id="rectW"
+     value="120" />
+  <variable
+     id="rectH"
+     value="40" />
+  <variable
+     id="hGap"
+     value="30" />
+  <variable
+     id="vGap"
+     value="30" />
+  <variable
+     id="startX"
+     value="50" />
+  <variable
+     id="startY"
+     value="180" />
+  <rect
+     x="797.11041"
+     y="110.7136"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect18" />
+  <polygon
+     points="800,340 790,335 790,345 "
+     fill="#000000"
+     id="arrowhead_34_35-1-5"
+     transform="translate(-3,-206.54646)" />
+  <text
+     x="857.11041"
+     y="135.71359"
+     text-anchor="middle"
+     font-size="12px"
+     id="text18">切叠热压</text>
+  <rect
+     x="33.634224"
+     y="178.66907"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect1" />
+  <text
+     x="93.634224"
+     y="203.66907"
+     text-anchor="middle"
+     font-size="12px"
+     id="text1">X-Ray01</text>
+  <rect
+     x="183.63422"
+     y="178.66907"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect2" />
+  <text
+     x="243.63422"
+     y="203.66907"
+     text-anchor="middle"
+     font-size="12px"
+     id="text2">极耳预焊</text>
+  <rect
+     x="335.63422"
+     y="178.66907"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect3" />
+  <text
+     x="393.63422"
+     y="203.66907"
+     text-anchor="middle"
+     font-size="12px"
+     id="text3">极耳终焊</text>
+  <rect
+     x="483.63422"
+     y="178.66907"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect4" />
+  <text
+     x="543.63422"
+     y="203.66907"
+     text-anchor="middle"
+     font-size="12px"
+     id="text4">盖板&amp;连接片焊接前</text>
+  <rect
+     x="633.63422"
+     y="178.66907"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect5" />
+  <text
+     x="693.63422"
+     y="203.66907"
+     text-anchor="middle"
+     font-size="12px"
+     id="text5">包PET膜</text>
+  <rect
+     x="785.3598"
+     y="176.79906"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect10" />
+  <text
+     x="845.3598"
+     y="201.79906"
+     text-anchor="middle"
+     font-size="12px"
+     id="text10">入预焊植</text>
+  <rect
+     x="936.14911"
+     y="176.79906"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect9" />
+  <text
+     x="996.14911"
+     y="201.79906"
+     text-anchor="middle"
+     font-size="12px"
+     id="text9">盖板焊接</text>
+  <rect
+     x="936.54382"
+     y="251.33093"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect8" />
+  <text
+     x="996.54382"
+     y="276.33093"
+     text-anchor="middle"
+     font-size="12px"
+     id="text8">X-Ray02</text>
+  <rect
+     x="786.54382"
+     y="251.33093"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect7" />
+  <text
+     x="846.54382"
+     y="276.33093"
+     text-anchor="middle"
+     font-size="12px"
+     id="text7">前氦检</text>
+  <rect
+     x="636.54382"
+     y="251.33093"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect6" />
+  <text
+     x="696.54382"
+     y="276.33093"
+     text-anchor="middle"
+     font-size="12px"
+     id="text6">真空烘烤</text>
+  <rect
+     x="487.48007"
+     y="250.79184"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect31" />
+  <text
+     x="547.48004"
+     y="275.79184"
+     text-anchor="middle"
+     font-size="12px"
+     id="text31">一次注液</text>
+  <rect
+     x="338.02167"
+     y="249.46091"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect32" />
+  <text
+     x="398.02167"
+     y="274.46091"
+     text-anchor="middle"
+     font-size="12px"
+     id="text32">高温静置1</text>
+  <rect
+     x="187.23235"
+     y="248.12999"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect33" />
+  <text
+     x="247.23235"
+     y="273.12997"
+     text-anchor="middle"
+     font-size="12px"
+     id="text33">OCV0</text>
+  <rect
+     x="35.773945"
+     y="248.12999"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect34" />
+  <text
+     x="95.773941"
+     y="273.12997"
+     text-anchor="middle"
+     font-size="12px"
+     id="text34">拔化成钉</text>
+  <rect
+     x="34.71743"
+     y="320"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect35" />
+  <text
+     x="94.71743"
+     y="345"
+     text-anchor="middle"
+     font-size="12px"
+     id="text35">化成</text>
+  <rect
+     x="183.78116"
+     y="320.79184"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect40" />
+  <text
+     x="243.78116"
+     y="345.79184"
+     text-anchor="middle"
+     font-size="12px"
+     id="text40">入化成钉</text>
+  <rect
+     x="334.5705"
+     y="322.12277"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect39" />
+  <text
+     x="394.5705"
+     y="347.12277"
+     text-anchor="middle"
+     font-size="12px"
+     id="text39">高温静置2</text>
+  <rect
+     x="485.3598"
+     y="322.12277"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect38" />
+  <text
+     x="545.3598"
+     y="347.12277"
+     text-anchor="middle"
+     font-size="12px"
+     id="text38">OCV1</text>
+  <rect
+     x="636.14911"
+     y="320.79184"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect37" />
+  <text
+     x="696.14911"
+     y="345.79184"
+     text-anchor="middle"
+     font-size="12px"
+     id="text37">二次注液</text>
+  <rect
+     x="786.93848"
+     y="320.79184"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect36" />
+  <text
+     x="846.93848"
+     y="345.79184"
+     text-anchor="middle"
+     font-size="12px"
+     id="text36">密封钉焊接</text>
+  <rect
+     x="934.67126"
+     y="320.25275"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect41" />
+  <line
+     x1="994"
+     y1="360"
+     x2="994"
+     y2="390"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_r1_r2-7" />
+  <polygon
+     points="855,240 865,240 860,250 "
+     fill="#000000"
+     id="arrowhead_r1_r2-1"
+     transform="translate(134,141.9928)" />
+  <text
+     x="994.67126"
+     y="345.25275"
+     text-anchor="middle"
+     font-size="12px"
+     id="text41">后氦检</text>
+  <rect
+     x="931.61475"
+     y="392.12274"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect42" />
+  <text
+     x="994.27661"
+     y="415.79184"
+     text-anchor="middle"
+     font-size="12px"
+     id="text42">加拘束1</text>
+  <rect
+     x="784.81824"
+     y="392.12277"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect43" />
+  <text
+     x="844.81824"
+     y="417.12277"
+     text-anchor="middle"
+     font-size="12px"
+     id="text43">SOC调整</text>
+  <rect
+     x="634.02887"
+     y="392.12277"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect44" />
+  <text
+     x="694.02887"
+     y="417.12277"
+     text-anchor="middle"
+     font-size="12px"
+     id="text44">常温静置3</text>
+  <rect
+     x="485.90143"
+     y="391.45367"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect45" />
+  <line
+     x1="606.32373"
+     y1="412.1763"
+     x2="634.9928"
+     y2="412.1763"
+     stroke="#000000"
+     stroke-width="0.977567"
+     id="arrow_44_45-8" />
+  <text
+     x="545.90143"
+     y="416.45367"
+     text-anchor="middle"
+     font-size="12px"
+     id="text45">常温静置1</text>
+  <rect
+     x="336.83768"
+     y="390.25275"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect50" />
+  <text
+     x="396.83768"
+     y="415.25275"
+     text-anchor="middle"
+     font-size="12px"
+     id="text50">OCV2</text>
+  <rect
+     x="186.83768"
+     y="390.25275"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect49" />
+  <text
+     x="246.83768"
+     y="415.25275"
+     text-anchor="middle"
+     font-size="12px"
+     id="text49">常温静置2</text>
+  <rect
+     x="36.837685"
+     y="390.25275"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect48" />
+  <text
+     x="96.837685"
+     y="415.25275"
+     text-anchor="middle"
+     font-size="12px"
+     id="text48">OCV3</text>
+  <rect
+     x="31.908632"
+     y="464.11554"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect47" />
+  <text
+     x="91.908638"
+     y="489.11554"
+     text-anchor="middle"
+     font-size="12px"
+     id="text47">加拘束2</text>
+  <rect
+     x="184.02888"
+     y="464.78461"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect46" />
+  <line
+     x1="302.98557"
+     y1="486"
+     x2="325"
+     y2="486"
+     stroke="#000000"
+     stroke-width="0.85663"
+     id="arrow_51_52-3-2" />
+  <polygon
+     points="340,625 350,620 340,615 "
+     fill="#000000"
+     id="arrowhead_51_52-5-1"
+     transform="translate(-17.014454,-134)" />
+  <text
+     x="246.69073"
+     y="488.45367"
+     text-anchor="middle"
+     font-size="12px"
+     id="text46">分容</text>
+  <rect
+     x="333.09262"
+     y="464.24551"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect51" />
+  <text
+     x="393.09262"
+     y="489.24551"
+     text-anchor="middle"
+     font-size="12px"
+     id="text51">常温静置3</text>
+  <rect
+     x="483.09262"
+     y="464.24551"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect52" />
+  <text
+     x="543.09265"
+     y="489.24551"
+     text-anchor="middle"
+     font-size="12px"
+     id="text52">OCV4</text>
+  <rect
+     x="633.09265"
+     y="464.24551"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect53" />
+  <text
+     x="693.09265"
+     y="489.24551"
+     text-anchor="middle"
+     font-size="12px"
+     id="text53">常温静置4</text>
+  <rect
+     x="783.09265"
+     y="464.24551"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect54" />
+  <text
+     x="843.09265"
+     y="489.24551"
+     text-anchor="middle"
+     font-size="12px"
+     id="text54">OCV5</text>
+  <rect
+     x="933.09265"
+     y="464.24551"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect55" />
+  <text
+     x="993.09265"
+     y="489.24551"
+     text-anchor="middle"
+     font-size="12px"
+     id="text55">常温静置5</text>
+  <rect
+     x="933.09265"
+     y="536.90735"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect58" />
+  <text
+     x="993.09265"
+     y="561.90735"
+     text-anchor="middle"
+     font-size="12px"
+     id="text58">OCV6</text>
+  <rect
+     x="783.09265"
+     y="536.90735"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect57" />
+  <text
+     x="843.09265"
+     y="561.90735"
+     text-anchor="middle"
+     font-size="12px"
+     id="text57">DCIR</text>
+  <rect
+     x="633.09265"
+     y="536.90735"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect56" />
+  <text
+     x="693.09265"
+     y="561.90735"
+     text-anchor="middle"
+     font-size="12px"
+     id="text56">常温静置6</text>
+  <rect
+     x="481.97534"
+     y="538.21765"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect83" />
+  <text
+     x="541.97534"
+     y="563.21765"
+     text-anchor="middle"
+     font-size="12px"
+     id="text83">降温辊压检测</text>
+  <rect
+     x="329.74075"
+     y="538.21771"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect84" />
+  <text
+     x="389.74075"
+     y="563.21771"
+     text-anchor="middle"
+     font-size="12px"
+     id="text84">电芯清洗1</text>
+  <rect
+     x="180.9335"
+     y="540.44684"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect85" />
+  <text
+     x="240.93352"
+     y="565.44684"
+     text-anchor="middle"
+     font-size="12px"
+     id="text85">电芯清洗2</text>
+  <rect
+     x="177.69197"
+     y="609.59149"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect88" />
+  <text
+     x="237.69197"
+     y="634.59149"
+     text-anchor="middle"
+     font-size="12px"
+     id="text88">外观检测</text>
+  <polygon
+     points="110,180 105,170 115,170 "
+     fill="#000000"
+     id="arrowhead_roll_to_cut"
+     transform="matrix(1.7296,0,0,1,670.50243,-69.286403)" />
+  <line
+     x1="153.63422"
+     y1="198.66907"
+     x2="183.63422"
+     y2="198.66907"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_1_2" />
+  <polygon
+     points="340,195 340,205 350,200 "
+     fill="#000000"
+     id="arrowhead_1_2"
+     transform="translate(-166.36578,-1.3309262)" />
+  <line
+     x1="303.63422"
+     y1="198.66907"
+     x2="333.63422"
+     y2="198.66907"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_2_3" />
+  <polygon
+     points="490,195 490,205 500,200 "
+     fill="#000000"
+     id="arrowhead_2_3"
+     transform="translate(-166.36578,-1.3309262)" />
+  <line
+     x1="457.62698"
+     y1="198.66907"
+     x2="483.63422"
+     y2="198.66907"
+     stroke="#000000"
+     stroke-width="0.931079"
+     id="arrow_3_4" />
+  <polygon
+     points="640,195 640,205 650,200 "
+     fill="#000000"
+     id="arrowhead_3_4"
+     transform="translate(-166.36578,-1.3309262)" />
+  <line
+     x1="603.63422"
+     y1="198.66907"
+     x2="633.63422"
+     y2="198.66907"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_4_5" />
+  <polygon
+     points="790,195 790,205 800,200 "
+     fill="#000000"
+     id="arrowhead_4_5"
+     transform="translate(-166.36578,-1.3309262)" />
+  <line
+     x1="997.08539"
+     y1="217.33813"
+     x2="997.08539"
+     y2="247.33813"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_r1_r2" />
+  <polygon
+     points="860,250 855,240 865,240 "
+     fill="#000000"
+     id="arrowhead_r1_r2"
+     transform="translate(137.0854,1.330926)" />
+  <line
+     x1="785.3598"
+     y1="196.79906"
+     x2="755.3598"
+     y2="196.79906"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_10_9" />
+  <line
+     x1="936.14911"
+     y1="196.79906"
+     x2="906.14911"
+     y2="196.79906"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_9_8" />
+  <line
+     x1="936.54382"
+     y1="271.33093"
+     x2="906.54382"
+     y2="271.33093"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_8_7" />
+  <polygon
+     points="480,265 480,275 470,270 "
+     fill="#000000"
+     id="arrowhead_8_7"
+     transform="translate(436.5438,1.3309262)" />
+  <line
+     x1="786.54382"
+     y1="271.33093"
+     x2="756.54382"
+     y2="271.33093"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_7_6" />
+  <polygon
+     points="330,265 330,275 320,270 "
+     fill="#000000"
+     id="arrowhead_7_6"
+     transform="translate(436.5438,1.3309262)" />
+  <line
+     x1="94.972397"
+     y1="288"
+     x2="94.972397"
+     y2="318"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_r2_r3" />
+  <polygon
+     points="860,390 855,380 865,380 "
+     fill="#000000"
+     id="arrowhead_r3_r4"
+     transform="translate(-766,-69)" />
+  <line
+     x1="607.48004"
+     y1="270.79184"
+     x2="637.48004"
+     y2="270.79184"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_31_32" />
+  <polygon
+     points="620,410 630,405 630,415 "
+     fill="#000000"
+     id="arrowhead_39_38-9"
+     transform="translate(-13.669074,-140)" />
+  <line
+     x1="458.02167"
+     y1="269.46091"
+     x2="488.02167"
+     y2="269.46091"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_32_33" />
+  <polygon
+     points="630,415 620,410 630,405 "
+     fill="#000000"
+     id="arrowhead_39_38-0"
+     transform="translate(-163,-140)" />
+  <line
+     x1="307.23233"
+     y1="270.12997"
+     x2="337.23233"
+     y2="270.12997"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_33_34" />
+  <polygon
+     points="630,405 630,415 620,410 "
+     fill="#000000"
+     id="arrowhead_39_38-0-4"
+     transform="translate(-314.33093,-140.33093)"
+     inkscape:transform-center-x="-2.6618524"
+     inkscape:transform-center-y="2.6618524" />
+  <line
+     x1="158.43579"
+     y1="266.79904"
+     x2="185.77394"
+     y2="266.79904"
+     stroke="#000000"
+     stroke-width="0.954605"
+     id="arrow_34_35" />
+  <polygon
+     points="630,415 620,410 630,405 "
+     fill="#000000"
+     id="arrowhead_39_38-0-8"
+     transform="translate(-466,-143)" />
+  <line
+     x1="183.78116"
+     y1="340.79184"
+     x2="153.78116"
+     y2="340.79184"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_40_39"
+     style="marker-mid:url(#Triangle)" />
+  <polygon
+     points="790,345 800,340 790,335 "
+     fill="#000000"
+     id="arrowhead_34_35"
+     transform="translate(-615.3237,0.32370784)" />
+  <line
+     x1="334.5705"
+     y1="342.12277"
+     x2="304.5705"
+     y2="342.12277"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_39_38" />
+  <polygon
+     points="790,345 800,340 790,335 "
+     fill="#000000"
+     id="arrowhead_34_35-7"
+     transform="translate(-464.99278,2.3381506)" />
+  <line
+     x1="485.3598"
+     y1="342.12277"
+     x2="455.3598"
+     y2="342.12277"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_38_37" />
+  <line
+     x1="636.14911"
+     y1="340.79184"
+     x2="606.14911"
+     y2="340.79184"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_37_36" />
+  <polygon
+     points="790,345 800,340 790,335 "
+     fill="#000000"
+     id="arrowhead_34_35-1"
+     transform="translate(-163.99278,0.66185542)" />
+  <line
+     x1="906.93848"
+     y1="340.25275"
+     x2="935.60754"
+     y2="340.25275"
+     stroke="#000000"
+     stroke-width="0.977566"
+     id="arrow_41_42" />
+  <polygon
+     points="800,340 790,335 790,345 "
+     fill="#000000"
+     id="arrowhead_34_35-1-9-5"
+     transform="translate(136.66907,0.9999992)" />
+  <line
+     x1="905.21289"
+     y1="410.79184"
+     x2="932.55103"
+     y2="410.79184"
+     stroke="#000000"
+     stroke-width="0.954605"
+     id="arrow_42_43" />
+  <polygon
+     points="470,270 480,265 480,275 "
+     fill="#000000"
+     id="arrowhead_8_7-0"
+     transform="translate(435.30926,140.66907)" />
+  <line
+     x1="754.02887"
+     y1="412.12277"
+     x2="784.02887"
+     y2="412.12277"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_44_45" />
+  <polygon
+     points="470,270 480,265 480,275 "
+     fill="#000000"
+     id="arrowhead_8_7-0-8"
+     transform="translate(283.76365,141.66907)" />
+  <line
+     x1="336.83768"
+     y1="410.25275"
+     x2="306.83768"
+     y2="410.25275"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_50_49" />
+  <polygon
+     points="780,555 770,550 780,545 "
+     fill="#000000"
+     id="arrowhead_50_49"
+     transform="translate(-463.16232,-139.74725)" />
+  <line
+     x1="186.83768"
+     y1="410.25275"
+     x2="156.83768"
+     y2="410.25275"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_49_48" />
+  <polygon
+     points="630,555 620,550 630,545 "
+     fill="#000000"
+     id="arrowhead_49_48"
+     transform="translate(-463.16232,-139.74725)" />
+  <line
+     x1="453.09262"
+     y1="484.24551"
+     x2="483.09262"
+     y2="484.24551"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_51_52" />
+  <polygon
+     points="340,615 340,625 350,620 "
+     fill="#000000"
+     id="arrowhead_51_52"
+     transform="translate(133.09262,-135.75447)" />
+  <line
+     x1="603.09265"
+     y1="484.24551"
+     x2="633.09265"
+     y2="484.24551"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_52_53" />
+  <polygon
+     points="490,615 490,625 500,620 "
+     fill="#000000"
+     id="arrowhead_52_53"
+     transform="translate(133.09262,-135.75447)" />
+  <line
+     x1="753.09265"
+     y1="484.24551"
+     x2="783.09265"
+     y2="484.24551"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_53_54" />
+  <polygon
+     points="640,615 640,625 650,620 "
+     fill="#000000"
+     id="arrowhead_53_54"
+     transform="translate(133.09262,-135.75447)" />
+  <line
+     x1="903.09265"
+     y1="484.24551"
+     x2="933.09265"
+     y2="484.24551"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_54_55" />
+  <polygon
+     points="790,615 790,625 800,620 "
+     fill="#000000"
+     id="arrowhead_54_55"
+     transform="translate(133.09262,-135.75447)" />
+  <line
+     x1="993.09265"
+     y1="504.24551"
+     x2="993.09265"
+     y2="534.24554"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_r7_r8" />
+  <polygon
+     points="855,660 865,660 860,670 "
+     fill="#000000"
+     id="arrowhead_r7_r8"
+     transform="translate(133.09262,-133.09262)" />
+  <line
+     x1="933.09265"
+     y1="556.90735"
+     x2="903.09265"
+     y2="556.90735"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_58_57" />
+  <polygon
+     points="780,685 780,695 770,690 "
+     fill="#000000"
+     id="arrowhead_58_57"
+     transform="translate(133.09262,-133.09262)" />
+  <line
+     x1="783.09265"
+     y1="556.90735"
+     x2="753.09265"
+     y2="556.90735"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_57_56" />
+  <polygon
+     points="630,685 630,695 620,690 "
+     fill="#000000"
+     id="arrowhead_57_56"
+     transform="translate(133.09262,-133.09262)" />
+  <line
+     x1="601.97534"
+     y1="558.21765"
+     x2="631.97534"
+     y2="558.21765"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_83_84" />
+  <polygon
+     points="630,695 620,690 630,685 "
+     fill="#000000"
+     id="arrowhead_57_56-9"
+     transform="translate(-18.5051,-131.79376)" />
+  <line
+     x1="451.74075"
+     y1="558.21771"
+     x2="481.74075"
+     y2="558.21771"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_84_85" />
+  <polygon
+     points="630,685 630,695 620,690 "
+     fill="#000000"
+     id="arrowhead_57_56-9-1"
+     transform="translate(-171.5051,-131.09262)" />
+  <line
+     x1="87.254395"
+     y1="578.26056"
+     x2="87.254395"
+     y2="608.26056"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_r9_r10" />
+  <polygon
+     points="265,590 260,600 255,590 "
+     fill="#000000"
+     id="arrowhead_r6_r7-9"
+     transform="translate(-172.35855,8.576452)" />
+  <line
+     x1="862.06641"
+     y1="35.1936"
+     x2="862.06641"
+     y2="107.5104"
+     stroke="#000000"
+     stroke-width="1.5526"
+     id="arrow_r1_r2-0" />
+  <rect
+     x="30.050627"
+     y="537.86829"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect52-3" />
+  <text
+     x="90.050629"
+     y="562.86829"
+     text-anchor="middle"
+     font-size="12px"
+     id="text52-8">UV喷涂A</text>
+  <rect
+     x="26.994114"
+     y="608.40735"
+     width="120"
+     height="40"
+     stroke="#000000"
+     fill="#ffffff"
+     id="rect53-1" />
+  <text
+     x="86.99408"
+     y="633.40735"
+     text-anchor="middle"
+     font-size="12px"
+     id="text53-5">UV喷涂B</text>
+  <line
+     x1="300.83997"
+     y1="559.19922"
+     x2="330.83997"
+     y2="559.19922"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_51_52-3" />
+  <polygon
+     points="780,545 780,555 770,550 "
+     fill="#000000"
+     id="arrowhead_50_49-9"
+     transform="translate(-469.30608,9.3309262)" />
+  <line
+     x1="150.05063"
+     y1="557.86829"
+     x2="180.05063"
+     y2="557.86829"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_52_53-4" />
+  <polygon
+     points="780,555 770,550 780,545 "
+     fill="#000000"
+     id="arrowhead_50_49-2"
+     transform="translate(-620.34537,7.6618524)" />
+  <line
+     x1="146.99409"
+     y1="628.40735"
+     x2="176.99409"
+     y2="628.40735"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_53_54-6" />
+  <polygon
+     points="650,620 640,615 640,625 "
+     fill="#000000"
+     id="arrowhead_53_54-5"
+     transform="translate(-473.00589,8.4073791)" />
+  <text
+     xml:space="preserve"
+     id="text11"
+     style="font-size:26.6667px;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect11);display:inline;fill:#000000;fill-opacity:0.0147783;fill-rule:nonzero;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4.9;stroke-opacity:0.305419" />
+  <polygon
+     points="800,340 790,335 790,345 "
+     fill="#000000"
+     id="arrowhead_34_35-9"
+     transform="translate(-314.52007,2.3309292)" />
+  <line
+     x1="785.66187"
+     y1="339.8309"
+     x2="755.66187"
+     y2="339.8309"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_37_36-5" />
+  <polygon
+     points="800,340 790,335 790,345 "
+     fill="#000000"
+     id="arrowhead_34_35-1-9"
+     transform="translate(-12.865436,0.10178743)" />
+  <polygon
+     points="480,275 470,270 480,265 "
+     fill="#000000"
+     id="arrowhead_8_7-0-4"
+     transform="translate(135.21802,142.56006)" />
+  <line
+     x1="484.33093"
+     y1="412.5"
+     x2="456.9928"
+     y2="412.5"
+     stroke="#000000"
+     stroke-width="0.954605"
+     id="arrow_48_47" />
+  <polygon
+     points="780,545 780,555 770,550 "
+     fill="#000000"
+     id="arrowhead_50_49-3"
+     transform="translate(-313.58172,-137.66908)" />
+  <line
+     x1="92.648697"
+     y1="431.6763"
+     x2="92.648697"
+     y2="461.6763"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_r2_r3-9" />
+  <polygon
+     points="865,380 860,390 855,380 "
+     fill="#000000"
+     id="arrowhead_r3_r4-7"
+     transform="translate(-768.3237,74.676295)" />
+  <line
+     x1="182.33092"
+     y1="484.1474"
+     x2="152.33093"
+     y2="484.1474"
+     stroke="#000000"
+     stroke-width="1"
+     id="arrow_47_46" />
+  <polygon
+     points="340,615 340,625 350,620 "
+     fill="#000000"
+     id="arrowhead_51_52-4"
+     transform="translate(-165.70114,-136)" />
+  <path
+     style="fill:#000000;fill-opacity:0.0147783;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4.9;stroke-opacity:0.71590906"
+     d="m 858.31646,149.405 v 12.7045 l -762.918023,3.75369 v 13.00888"
+     id="path1" />
+  <polygon
+     points="865,380 860,390 855,380 "
+     fill="#000000"
+     id="arrowhead_r3_r4-3"
+     transform="translate(-765,-211)" />
+</svg>
