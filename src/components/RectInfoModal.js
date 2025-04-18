@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Tabs } from 'antd';
+import { Modal, Tabs, Space, Tag } from 'antd';
 import './RectInfoModal.css';
 import MethodTab from './tabs/MethodTab';
 import MachineTab from './tabs/MachineTab';
@@ -8,7 +8,8 @@ import PersonTab from './tabs/PersonTab';
 import EnvironmentTab from './tabs/EnvironmentTab';
 import TestTab from './tabs/TestTab';
 
-const RectInfoModal = ({ selectedRect, setSelectedRect }) => {
+// 添加 productLine 参数
+const RectInfoModal = ({ selectedRect, setSelectedRect, productLine }) => {
 
   const tabItems = [
     {
@@ -43,9 +44,17 @@ const RectInfoModal = ({ selectedRect, setSelectedRect }) => {
     }
   ];
 
+  // 自定义标题组件，包含工序名称和产线信息
+  const modalTitle = (
+    <Space>
+      <span>{selectedRect?.text || '工序详情'}</span>
+      {productLine && <Tag color="blue">产线: {productLine}</Tag>}
+    </Space>
+  );
+
   return (
     <Modal
-      title={selectedRect?.text || '工序详情'}
+      title={modalTitle}
       open={!!selectedRect}
       onCancel={() => setSelectedRect(null)}
       width="100vw"

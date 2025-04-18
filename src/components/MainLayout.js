@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Layout, Input, Button, Space, Typography, Alert, Row, Col } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import './MainLayout.css';
-import useFlowChart from '../hooks/useFlowChart'; 
+import useBarcodeSearch from '../hooks/useBarcodeSearch';
 import useSvgInteraction from '../hooks/useSvgInteraction';
 import RectInfoModal from './RectInfoModal';
 
@@ -10,15 +10,16 @@ const { Header, Content } = Layout;
 const { Text } = Typography;
 
 const MainLayout = ({ children }) => {
-  const [barcode, setBarcode] = useState('');
-  const { loading, error, productLine, queryBarcode } = useFlowChart();
-  const { selectedRect, setSelectedRect, handleSvgLoad } = useSvgInteraction();
+  const { 
+    barcode, 
+    setBarcode, 
+    handleSearch, 
+    isLoading, 
+    error, 
+    productLine 
+  } = useBarcodeSearch();
   
-  const handleSearch = () => {
-    if (barcode.trim()) {
-      queryBarcode(barcode);
-    }
-  };
+  const { selectedRect, setSelectedRect, handleSvgLoad } = useSvgInteraction();
   
   return (
     <Layout className="main-layout">
@@ -34,14 +35,14 @@ const MainLayout = ({ children }) => {
                   placeholder="请输入电芯条码" 
                   value={barcode}
                   onChange={(e) => setBarcode(e.target.value)}
-                  style={{ width: 200 }}
+                  style={{ width: 250 }}
                   onPressEnter={handleSearch}
                 />
                 <Button 
                   type="primary" 
                   icon={<SearchOutlined />}
                   onClick={handleSearch}
-                  loading={loading}
+                  loading={isLoading}
                 >
                   查询
                 </Button>
@@ -83,6 +84,7 @@ const MainLayout = ({ children }) => {
       <RectInfoModal 
         selectedRect={selectedRect} 
         setSelectedRect={setSelectedRect} 
+        productLine={productLine}  
       />
     </Layout>
   );
