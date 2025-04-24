@@ -16,19 +16,25 @@ const MainLayout = ({ children }) => {
     handleSearch, 
     isLoading, 
     error, 
-    productLine 
+    productLine,
+    workOrderData 
   } = useBarcodeSearch();
   
-  const { selectedRect, setSelectedRect, handleSvgLoad } = useSvgInteraction();
+  // 使用基础的SVG交互Hook，移除用户相关逻辑
+  const { 
+    selectedRect, 
+    setSelectedRect, 
+    handleSvgLoad
+  } = useSvgInteraction();
   
   return (
     <Layout className="main-layout">
       <Header className="main-header" style={{ height: 'auto', padding: '16px 0' }}>
         <div className="header-container">
           <Row gutter={[0, 16]} align="middle">
-            <Col span={24}>
+            {/* <Col span={24}>
               <Text style={{ fontSize: '20px', color: '#000' }}>电芯生产流程追踪</Text>
-            </Col>
+            </Col> */}
             <Col span={24}>
               <Space size="middle" style={{ height: '32px' }}>
                 <Input 
@@ -84,7 +90,9 @@ const MainLayout = ({ children }) => {
       <RectInfoModal 
         selectedRect={selectedRect} 
         setSelectedRect={setSelectedRect} 
-        productLine={productLine}  
+        productLine={productLine}
+        workOrderData={workOrderData}
+        materialLotCode={barcode}  
       />
     </Layout>
   );

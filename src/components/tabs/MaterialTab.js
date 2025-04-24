@@ -1,31 +1,30 @@
 import React from 'react';
-import { Card, Table, Divider, Typography } from 'antd';
+import { Card, Table, Divider, Typography, Empty, Spin } from 'antd';
+import useMaterialFeeding from '../../hooks/useMaterialFeeding';
 
 const { Title } = Typography;
 
-const MaterialTab = () => {
+const MaterialTab = ({ materialLotCode, operationName }) => {
+  // 使用物料投入Hook
+  const { materialFeedingData, loading, error, fetchMaterialFeeding } = useMaterialFeeding();
+  
+  // 当组件接收到新的参数时获取数据
+  React.useEffect(() => {
+    if (materialLotCode && operationName) {
+      fetchMaterialFeeding(materialLotCode, operationName);
+    }
+  }, [materialLotCode, operationName, fetchMaterialFeeding]);
+  
   // 物料投入表格配置
   const materialColumns = [
     { title: '物料名称', dataIndex: 'materialName', key: 'materialName' },
     { title: '物料编号', dataIndex: 'materialCode', key: 'materialCode' },
     { title: '批次号', dataIndex: 'batchNo', key: 'batchNo' },
-    { title: '供应商', dataIndex: 'supplier', key: 'supplier' },
     { title: '投入数量', dataIndex: 'quantity', key: 'quantity' },
     { title: '投入时间', dataIndex: 'inputTime', key: 'inputTime' },
     { title: '操作人员', dataIndex: 'operator', key: 'operator' },
-  ];
-
-  const materialData = [
-    { 
-      key: '1', 
-      materialName: '18650电芯', 
-      materialCode: 'BAT-18650', 
-      batchNo: 'B20240501',
-      supplier: '供应商A',
-      quantity: '1000',
-      inputTime: '2024-05-01 09:00:00',
-      operator: '张三'
-    },
+    { title: '设备编号', dataIndex: 'equipCode', key: 'equipCode' },
+    { title: '工序名称', dataIndex: 'operationName', key: 'operationName' },
   ];
 
   // IQC检验数据表格配置
@@ -39,47 +38,28 @@ const MaterialTab = () => {
     { title: '检验时间', dataIndex: 'inspectionTime', key: 'inspectionTime' },
   ];
 
-  const iqcData = [
-    { 
-      key: '1', 
-      inspectionItem: '电压', 
-      standardValue: '3.7±0.1', 
-      measuredValue: '3.68', 
-      unit: 'V',
-      result: '合格',
-      inspector: '李四',
-      inspectionTime: '2024-05-01 08:30:00'
-    },
-    { 
-      key: '2', 
-      inspectionItem: '内阻', 
-      standardValue: '≤30', 
-      measuredValue: '28.5', 
-      unit: 'mΩ',
-      result: '合格',
-      inspector: '李四',
-      inspectionTime: '2024-05-01 08:35:00'
-    },
-    { 
-      key: '3', 
-      inspectionItem: '容量', 
-      standardValue: '≥5000', 
-      measuredValue: '5120', 
-      unit: 'mAh',
-      result: '合格',
-      inspector: '李四',
-      inspectionTime: '2024-05-01 08:40:00'
-    },
-  ];
+  // 渲染加载状态
+  if (loading) {
+    return (
+      <Card>
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <Spin size="large" />
+          <p style={{ marginTop: '10px' }}>正在加载物料投入信息...</p>
+        </div>
+      </Card>
+    );
+  }
 
   return (
     <Card>
       <Title level={4}>物料投入</Title>
+      {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
       <Table 
         columns={materialColumns} 
-        dataSource={materialData} 
+        dataSource={materialFeedingData} 
         pagination={false}
         size="small"
+        locale={{ emptyText: <Empty description="暂无物料投入数据，请先查询" /> }}
       />
       
       <Divider />
@@ -87,9 +67,10 @@ const MaterialTab = () => {
       <Title level={4}>IQC检验数据</Title>
       <Table 
         columns={iqcColumns} 
-        dataSource={iqcData}
+        dataSource={[]} 
         pagination={false}
         size="small"
+        locale={{ emptyText: <Empty description="暂无检验数据，请先查询" /> }}
       />
     </Card>
   );

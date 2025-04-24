@@ -1,29 +1,18 @@
 import React from 'react';
-import { Card, Table, Divider, Typography } from 'antd';
+import { Card, Table, Divider, Typography, Empty } from 'antd';
 
 const { Title } = Typography;
 
-const MachineTab = () => {
+const MachineTab = ({ workOrderData: externalWorkOrderData }) => {
   // 工单信息表格配置
   const orderColumns = [
     { title: '工单编号', dataIndex: 'orderId', key: 'orderId' },
     { title: '工单状态', dataIndex: 'orderStatus', key: 'orderStatus' },
     { title: '计划数量', dataIndex: 'planQuantity', key: 'planQuantity' },
+    { title: '下达数量', dataIndex: 'actualQuantity', key: 'actualQuantity' },
     { title: '完工数量', dataIndex: 'completedQuantity', key: 'completedQuantity' },
     { title: '计划开始时间', dataIndex: 'startTime', key: 'startTime' },
     { title: '计划结束时间', dataIndex: 'endTime', key: 'endTime' },
-  ];
-
-  const orderData = [
-    { 
-      key: '1', 
-      orderId: 'WO-20240501-001', 
-      orderStatus: '生产中', 
-      planQuantity: '1000', 
-      completedQuantity: '750',
-      startTime: '2024-05-01 08:00:00',
-      endTime: '2024-05-05 17:00:00'
-    },
   ];
 
   // 结果参数表格配置
@@ -65,12 +54,13 @@ const MachineTab = () => {
   return (
     <Card>
       <Title level={4}>工单信息</Title>
-      <Table 
-        columns={orderColumns} 
-        dataSource={orderData} 
-        pagination={false}
-        size="small"
-      />
+        <Table 
+          columns={orderColumns} 
+          dataSource={externalWorkOrderData ? [externalWorkOrderData] : []} 
+          pagination={false}
+          size="small"
+          locale={{ emptyText: <Empty description="暂无工单数据，请先查询" /> }}
+        />
       
       <Divider />
       

@@ -49,11 +49,3 @@ export const fetchMaterialFeeding = async (materialLotCode, operationName) => {
   }
 };
 
-// 移除不需要的API
-// export const fetchMachineInfo = async (materialLotCode) => {
-//   // 实现机器信息API
-// };
-
-// export const fetchMaterialInfo = async (materialLotCode) => {
-//   // 实现物料信息API
-// };

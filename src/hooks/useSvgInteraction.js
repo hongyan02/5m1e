@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const useSvgInteraction = () => {
+const useSvgInteraction = (onRectClick) => {
   const [selectedRect, setSelectedRect] = useState(null);
   const [svgDoc, setSvgDoc] = useState(null);
 
@@ -85,13 +85,13 @@ const useSvgInteraction = () => {
       // 使用setAttribute设置样式，而不是直接操作style对象
       rect.setAttribute("style", "position:relative;z-index:1000;cursor:pointer;");
       rect.setAttribute("pointer-events", "all");
-      
+
       // 移除旧的事件监听器以防止重复绑定
       const oldClickHandler = rect._clickHandler;
       if (oldClickHandler) {
         rect.removeEventListener('click', oldClickHandler);
       }
-      
+
       // 创建并存储新的事件处理函数
       const clickHandler = (event) => {
         event.stopPropagation();
@@ -103,7 +103,13 @@ const useSvgInteraction = () => {
 
           console.log('rectInfo', rectInfo);
           
+          // 设置选中的矩形
           setSelectedRect(rectInfo);
+          
+          // 调用外部传入的点击回调函数
+          if (onRectClick && typeof onRectClick === 'function') {
+            onRectClick(rectInfo);
+          }
         } catch (error) {
           console.error('处理SVG元素点击时出错:', error);
         }
@@ -114,7 +120,7 @@ const useSvgInteraction = () => {
     } catch (error) {
       console.error('添加点击处理器时出错:', error);
     }
-  }, [extractRectData]);
+  }, [extractRectData, onRectClick]);
 
   // 主要的事件监听器附加函数
   const attachEventListeners = useCallback((doc) => {

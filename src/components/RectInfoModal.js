@@ -8,8 +8,8 @@ import PersonTab from './tabs/PersonTab';
 import EnvironmentTab from './tabs/EnvironmentTab';
 import TestTab from './tabs/TestTab';
 
-// 添加 productLine 参数
-const RectInfoModal = ({ selectedRect, setSelectedRect, productLine }) => {
+
+const RectInfoModal = ({ selectedRect, setSelectedRect, productLine, workOrderData, userData, userLoading, materialLotCode }) => {
 
   const tabItems = [
     {
@@ -20,17 +20,23 @@ const RectInfoModal = ({ selectedRect, setSelectedRect, productLine }) => {
     {
       key: '2',
       label: '设备信息',
-      children: <MachineTab />
+      children: <MachineTab workOrderData={workOrderData} />
     },
     {
       key: '3',
       label: '物料信息',
-      children: <MaterialTab />
+      children: <MaterialTab 
+        materialLotCode={materialLotCode} 
+        operationName={selectedRect?.tableName || ''} 
+      />
     },
     {
       key: '4',
       label: '人员信息',
-      children: <PersonTab />
+      children: <PersonTab 
+        materialLotCode={materialLotCode} 
+        operationName={selectedRect?.tableName || ''} 
+      />
     },
     {
       key: '5',
@@ -40,11 +46,13 @@ const RectInfoModal = ({ selectedRect, setSelectedRect, productLine }) => {
     {
       key: '6',
       label: '测试信息',
-      children: <TestTab />
+      children: <TestTab 
+        materialLotCode={materialLotCode} 
+        operationName={selectedRect?.tableName || ''} 
+      />
     }
   ];
 
-  // 自定义标题组件，包含工序名称和产线信息
   const modalTitle = (
     <Space>
       <span>{selectedRect?.text || '工序详情'}</span>
