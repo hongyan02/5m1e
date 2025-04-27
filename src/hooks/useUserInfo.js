@@ -26,7 +26,6 @@ const useUserInfo = () => {
   const formatUserData = useCallback((responseData) => {
     if (!responseData) return null;
     
-    // 修改这里，直接使用 responseData 而不是 responseData.user
     return {
       userId: responseData.user_name || '',
       userName: responseData.user_id || '',
@@ -63,7 +62,7 @@ const useUserInfo = () => {
       }
     } catch (err) {
       console.error('获取用户信息失败:', err);
-      setError('获取用户信息失败');
+      // setError('获取用户信息失败');
       setUserData(null);
     } finally {
       setLoading(false);

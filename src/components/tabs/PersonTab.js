@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Card, Descriptions, Avatar, Tag, Space, Typography, Spin } from 'antd';
+import { Card, Descriptions, Avatar, Tag, Space, Typography, Spin, Empty } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import useUserInfo from '../../hooks/useUserInfo';
 
@@ -37,21 +37,28 @@ const PersonTab = ({ materialLotCode, operationName }) => {
     );
   }
 
-  // 使用API返回的数据或默认数据
-  const operatorInfo = userData ? {
-    name: userData.userName || '未知',  // 修改：使用 userName 作为姓名
-    id: userData.userId || '未知',  // 修改：使用 userId 作为工号
+  // 如果没有用户数据，显示空状态
+  if (!userData) {
+    return (
+      <Card>
+        <Space direction="vertical" size="large" style={{ width: '100%' }}>
+          <Title level={4}>人员信息</Title>
+          <div style={{ textAlign: 'center', padding: '20px' }}>
+            <Empty description="暂无用户数据，请先查询" />
+          </div>
+        </Space>
+      </Card>
+    );
+  }
+
+  // 使用API返回的数据
+  const operatorInfo = {
+    name: userData.userName || '未知',  
+    id: userData.userId || '未知',  
     department: userData.department || '未知',
     skillLevel: userData.skillLevel || '未知',
     experience: userData.experience || '未知',
     operationTime: userData.operationTime || '未知'
-  } : {
-    name: '未获取到用户',
-    id: '未知',
-    department: '未知',
-    skillLevel: '未知',
-    experience: '未知',
-    operationTime: '未知'
   };
 
   return (
@@ -62,18 +69,18 @@ const PersonTab = ({ materialLotCode, operationName }) => {
           <div>
             <Title level={4} style={{ margin: 0 }}>{operatorInfo.name}</Title>
             <Tag color="blue">工号: {operatorInfo.id}</Tag>
-            <Tag color="green">{operatorInfo.department}</Tag>
-            <Tag color="gold">技能等级: {operatorInfo.skillLevel}</Tag>
+            {/* <Tag color="green">{operatorInfo.department}</Tag> */}
+            {/* <Tag color="gold">技能等级: {operatorInfo.skillLevel}</Tag> */}
           </div>
         </Space>
 
         <Descriptions title="基本信息" bordered column={2}>
           <Descriptions.Item label="姓名">{operatorInfo.name}</Descriptions.Item>
           <Descriptions.Item label="工号">{operatorInfo.id}</Descriptions.Item>
-          <Descriptions.Item label="部门">{operatorInfo.department}</Descriptions.Item>
-          <Descriptions.Item label="技能等级">{operatorInfo.skillLevel}</Descriptions.Item>
-          <Descriptions.Item label="工作经验">{operatorInfo.experience}</Descriptions.Item>
-          <Descriptions.Item label="操作时间">{operatorInfo.operationTime}</Descriptions.Item>
+          {/* <Descriptions.Item label="部门">{operatorInfo.department}</Descriptions.Item> */}
+          {/* <Descriptions.Item label="技能等级">{operatorInfo.skillLevel}</Descriptions.Item> */}
+          {/* <Descriptions.Item label="工作经验">{operatorInfo.experience}</Descriptions.Item> */}
+          {/* <Descriptions.Item label="操作时间">{operatorInfo.operationTime}</Descriptions.Item> */}
         </Descriptions>
       </Space>
     </Card>

@@ -66,7 +66,7 @@ const TestTab = ({ materialLotCode, operationName }) => {
         loading={loading}
         pagination={{ pageSize: 5 }}
         size="small"
-        locale={{ emptyText: <Empty description="暂无检验数据，请先查询" /> }}
+        locale={{ emptyText: <Empty description="暂无检验数据" /> }}
       />
     </Card>
   );

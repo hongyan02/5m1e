@@ -65,7 +65,7 @@ const useWorkOrder = (workOrderId = null) => {
       }
     } catch (err) {
       console.error('获取工单信息失败:', err);
-      setError('获取工单信息失败');
+      // setError('获取工单信息失败');
       setWorkOrderData(null);
     } finally {
       setLoading(false);

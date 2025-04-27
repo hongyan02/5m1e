@@ -20,7 +20,11 @@ const RectInfoModal = ({ selectedRect, setSelectedRect, productLine, workOrderDa
     {
       key: '2',
       label: '设备信息',
-      children: <MachineTab workOrderData={workOrderData} />
+      children: <MachineTab 
+        workOrderData={workOrderData}
+        materialLotCode={materialLotCode} 
+        operationName={selectedRect?.tableName || ''}
+      />
     },
     {
       key: '3',

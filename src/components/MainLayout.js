@@ -1,31 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout, Input, Button, Space, Typography, Alert, Row, Col } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import './MainLayout.css';
-import useBarcodeSearch from '../hooks/useBarcodeSearch';
+import useProductLine from '../hooks/useProductLine';
 import useSvgInteraction from '../hooks/useSvgInteraction';
+import useWorkOrder from '../hooks/useWorkOrder';
 import RectInfoModal from './RectInfoModal';
 
 const { Header, Content } = Layout;
 const { Text } = Typography;
 
 const MainLayout = ({ children }) => {
+  const [barcode, setBarcode] = useState('');
   const { 
-    barcode, 
-    setBarcode, 
-    handleSearch, 
-    isLoading, 
-    error, 
-    productLine,
-    workOrderData 
-  } = useBarcodeSearch();
+    productLine, 
+    loading: productLineLoading, 
+    error: productLineError, 
+    queryProductLine 
+  } = useProductLine();
   
-  // 使用基础的SVG交互Hook，移除用户相关逻辑
+  // 使用工单信息Hook
+  const {
+    workOrderData,
+    loading: workOrderLoading,
+    error: workOrderError,
+    fetchWorkOrder
+  } = useWorkOrder();
+  
+  // 使用基础的SVG交互Hook
   const { 
     selectedRect, 
     setSelectedRect, 
     handleSvgLoad
   } = useSvgInteraction();
+  
+  const handleSearch = () => {
+    if (!barcode.trim()) return;
+    queryProductLine(barcode);
+    fetchWorkOrder(barcode); // 同时获取工单信息
+  };
+  
+  // 计算加载状态
+  const isLoading = productLineLoading || workOrderLoading;
   
   return (
     <Layout className="main-layout">
@@ -52,7 +68,8 @@ const MainLayout = ({ children }) => {
                 >
                   查询
                 </Button>
-                {error && <Alert message={error} type="error" showIcon />}
+                {productLineError && <Alert message={productLineError} type="error" showIcon />}
+                {workOrderError && <Alert message={workOrderError} type="error" showIcon />}
                 <Text strong style={{ color: '#000' }}>产线：<Text type="secondary">{productLine}</Text></Text>
               </Space>
             </Col>
@@ -91,7 +108,7 @@ const MainLayout = ({ children }) => {
         selectedRect={selectedRect} 
         setSelectedRect={setSelectedRect} 
         productLine={productLine}
-        workOrderData={workOrderData}
+        workOrderData={workOrderData}  // 传递工单数据
         materialLotCode={barcode}  
       />
     </Layout>

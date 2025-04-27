@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import axios from 'axios';
+import { API_CONFIG, INSPECTION_TYPE, INSPECTION_STATUS, RESULT_STATUS, PROCESS_NAME } from '../config/apiConfig';
 
 /**
  * 检验数据Hook
@@ -10,6 +11,26 @@ const useInspectionData = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
+  // 映射检验类型
+  const mapInspectionType = (code) => {
+    return INSPECTION_TYPE[code] || code; // 如果没有映射，则返回原始代码
+  };
+  
+  // 映射检验状态
+  const mapInspectionStatus = (code) => {
+    return INSPECTION_STATUS[code] || code; // 如果没有映射，则返回原始代码
+  };
+  
+  // 映射检验结果
+  const mapInspectionResult = (code) => {
+    return RESULT_STATUS[code] || code; // 如果没有映射，则返回原始代码
+  };
+
+  // 映射工序名称
+  const mapProcessName = (code) => {
+    return PROCESS_NAME[code] || code; // 如果没有映射，则返回原始代码
+  };
+
   // 格式化日期时间
   const formatDate = useCallback((dateString) => {
     if (!dateString) return '';
@@ -34,17 +55,17 @@ const useInspectionData = () => {
     if (!responseData || !responseData.inspection_records || !Array.isArray(responseData.inspection_records)) {
       return [];
     }
-    
+
     return responseData.inspection_records.map((item, index) => ({
       key: index.toString(),
       inspectionCode: item.InspectionRecordCode,
-      status: item.InspectionStatus,
+      status: mapInspectionStatus(item.InspectionStatus),
       productionDate: formatDate(item.ProductionDate),
       inspectionBy: item.InspectionBy,
       inspectionDate: formatDate(item.InspectionDate),
-      result: item.InspectionResult,
-      category: item.IdentifyCategory,
-      operation: item.OperationName
+      result: mapInspectionResult(item.InspectionResult),
+      category: mapInspectionType(item.IdentifyCategory),
+      operation: mapProcessName(item.OperationName),
     }));
   }, [formatDate]);
   
@@ -60,9 +81,7 @@ const useInspectionData = () => {
     
     try {
       // 调用检验数据API
-      const response = await axios.post(
-        'http://10.22.161.62:8083/api/5m1e/inspection',
-        {
+      const response = await axios.post(API_CONFIG.endpoints.inspection, {
           material_lot_code: materialLotCode,
           operation_name: operationName
         }

@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import axios from 'axios';
-import { API_CONFIG } from '../config/apiConfig';
+import { API_CONFIG, PROCESS_NAME } from '../config/apiConfig';
 
 /**
  * 物料投入Hook
@@ -11,6 +11,11 @@ const useMaterialFeeding = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
+    // 映射工序名称
+    const mapProcessName = (code) => {
+      return PROCESS_NAME[code] || code; // 如果没有映射，则返回原始代码
+    };
+
   // 格式化日期时间
   const formatDateTime = useCallback((dateTimeString) => {
     if (!dateTimeString) return '';
@@ -41,7 +46,7 @@ const useMaterialFeeding = () => {
       inputTime: formatDateTime(item.FeedingTime), 
       operator: item.FeedingPerson || '',
       equipCode: item.EquipCode || '',
-      operationName: item.OperationName || ''
+      operationName: mapProcessName(item.OperationName) || ''
     }));
   }, [formatDateTime]); 
   

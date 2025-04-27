@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { fetchProductLine } from '../services/api';
-import { PROD_LINE_MAPPING } from '../config/apiConfig';
+import axios from 'axios';
+import { PROD_LINE_MAPPING, API_CONFIG } from '../config/apiConfig';
 
 const useProductLine = () => {
   const [productLine, setProductLine] = useState('待查询');
@@ -17,14 +17,18 @@ const useProductLine = () => {
     setError(null);
     
     try {
-      const response = await fetchProductLine(materialLotCode);
-      if (response && response.prod_line_code) {
+      const response = await axios.post(API_CONFIG.endpoints.productLine, {
+        material_lot_code: materialLotCode
+      });
+      
+      if (response.data && response.data.prod_line_code) {
         // 使用映射将产线代码转换为产线名称
-        setProductLine(mapProductLine(response.prod_line_code));
+        setProductLine(mapProductLine(response.data.prod_line_code));
       } else {
         setProductLine('未知产线');
       }
     } catch (err) {
+      console.error('获取产线信息失败:', err);
       setError('获取产线信息失败');
       setProductLine('查询失败');
     } finally {

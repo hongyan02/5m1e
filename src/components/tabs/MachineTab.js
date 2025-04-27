@@ -1,9 +1,25 @@
-import React from 'react';
-import { Card, Table, Divider, Typography, Empty } from 'antd';
+import React, { useEffect } from 'react';
+import { Card, Table, Divider, Typography, Empty, Spin } from 'antd';
+import useResultParams from '../../hooks/useResultParams';
+import useProcessParams from '../../hooks/useProcessParams';
 
 const { Title } = Typography;
 
-const MachineTab = ({ workOrderData: externalWorkOrderData }) => {
+const MachineTab = ({ workOrderData: externalWorkOrderData, materialLotCode, operationName }) => {
+  // 使用结果参数Hook
+  const { resultParamsData, loading: resultLoading, error: resultError, fetchResultParams } = useResultParams();
+  
+  // 使用过程参数Hook
+  const { processParamsData, loading: processLoading, error: processError, fetchProcessParams } = useProcessParams();
+  
+  // 当组件接收到新的参数时获取数据
+  useEffect(() => {
+    if (materialLotCode && operationName) {
+      fetchResultParams(materialLotCode, operationName);
+      fetchProcessParams(materialLotCode, operationName);
+    }
+  }, [materialLotCode, operationName, fetchResultParams, fetchProcessParams]);
+  
   // 工单信息表格配置
   const orderColumns = [
     { title: '工单编号', dataIndex: 'orderId', key: 'orderId' },
@@ -15,41 +31,130 @@ const MachineTab = ({ workOrderData: externalWorkOrderData }) => {
     { title: '计划结束时间', dataIndex: 'endTime', key: 'endTime' },
   ];
 
-  // 结果参数表格配置
-  const resultColumns = [
-    { title: '上正极厚度', dataIndex: 'positiveThickness', key: 'positiveThickness' },
-    { title: '右下V角深', dataIndex: 'vCornerDepth', key: 'vCornerDepth' },
-    { title: '厚度结果', dataIndex: 'thicknessResult', key: 'thicknessResult' },
-    { title: 'hipot阻值', dataIndex: 'hipotResistance', key: 'hipotResistance' },
-    { title: 'hipot测试电压', dataIndex: 'hipotVoltage', key: 'hipotVoltage' },
-  ];
+  // 动态生成结果参数表格数据 - 横向展示
+  const generateResultParamsTable = () => {
+    if (!resultParamsData || resultParamsData.length === 0) {
+      return {
+        columns: [],
+        dataSource: []
+      };
+    }
 
-  const resultData = [
-    { 
-      key: '1', 
-      positiveThickness: '0.25mm', 
-      vCornerDepth: '0.12mm', 
-      thicknessResult: '合格', 
-      hipotResistance: '15MΩ',
-      hipotVoltage: '500V'
-    },
-    { 
-      key: '2', 
-      positiveThickness: '0.26mm', 
-      vCornerDepth: '0.11mm', 
-      thicknessResult: '合格', 
-      hipotResistance: '16MΩ',
-      hipotVoltage: '500V'
-    },
-    { 
-      key: '3', 
-      positiveThickness: '0.24mm', 
-      vCornerDepth: '0.13mm', 
-      thicknessResult: '合格', 
-      hipotResistance: '14MΩ',
-      hipotVoltage: '500V'
-    },
-  ];
+    // 创建表格列配置 - 每个参数名称作为一列
+    const columns = resultParamsData.map((item, index) => ({
+      title: item.columns,
+      dataIndex: `param_${index}`,
+      key: `param_${index}`,
+      width: 150,
+      ellipsis: true
+    }));
+
+    // 创建表格数据源 - 只有一行，包含所有参数值
+    const valuesRow = {};
+    resultParamsData.forEach((item, index) => {
+      valuesRow[`param_${index}`] = item.rows;
+    });
+
+    const dataSource = [
+      { key: '0', ...valuesRow }
+    ];
+
+    return {
+      columns,
+      dataSource
+    };
+  };
+
+  // 动态生成过程参数表格数据 - 横向展示
+  const generateProcessParamsTable = () => {
+    if (!processParamsData || processParamsData.length === 0) {
+      return {
+        columns: [],
+        dataSource: []
+      };
+    }
+
+    // 创建表格列配置 - 每个参数名称作为一列
+    const columns = processParamsData.map((item, index) => ({
+      title: item.columns,
+      dataIndex: `param_${index}`,
+      key: `param_${index}`,
+      width: 150,
+      ellipsis: true
+    }));
+
+    // 创建表格数据源 - 只有一行，包含所有参数值
+    const valuesRow = {};
+    processParamsData.forEach((item, index) => {
+      valuesRow[`param_${index}`] = item.rows;
+    });
+
+    const dataSource = [
+      { key: '0', ...valuesRow }
+    ];
+
+    return {
+      columns,
+      dataSource
+    };
+  };
+
+  const resultParamsTable = generateResultParamsTable();
+  const processParamsTable = generateProcessParamsTable();
+
+  // 渲染结果参数表格
+  const renderResultParamsTable = () => {
+    if (resultLoading) {
+      return (
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <Spin size="large" />
+          <p style={{ marginTop: '10px' }}>正在加载结果参数...</p>
+        </div>
+      );
+    }
+
+    if (resultError) {
+      return <div style={{ color: 'red', marginBottom: '10px' }}>{resultError}</div>;
+    }
+
+    return (
+      <Table 
+        columns={resultParamsTable.columns} 
+        dataSource={resultParamsTable.dataSource} 
+        pagination={false}
+        size="small"
+        scroll={{ x: 'max-content' }}
+        locale={{ emptyText: <Empty description="暂无结果参数数据" /> }}
+      />
+    );
+  };
+
+  // 渲染过程参数表格
+  const renderProcessParamsTable = () => {
+    if (processLoading) {
+      return (
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <Spin size="large" />
+          <p style={{ marginTop: '10px' }}>正在加载过程参数...</p>
+        </div>
+      );
+    }
+
+    if (processError) {
+      return <div style={{ color: 'red', marginBottom: '10px' }}>{processError}</div>;
+    }
+
+    return (
+      <Table 
+        columns={processParamsTable.columns} 
+        dataSource={processParamsTable.dataSource} 
+        pagination={false}
+        size="small"
+        scroll={{ x: 'max-content' }}
+        locale={{ emptyText: <Empty description="暂无过程参数数据" /> }}
+      />
+    );
+  };
 
   return (
     <Card>
@@ -59,18 +164,18 @@ const MachineTab = ({ workOrderData: externalWorkOrderData }) => {
           dataSource={externalWorkOrderData ? [externalWorkOrderData] : []} 
           pagination={false}
           size="small"
-          locale={{ emptyText: <Empty description="暂无工单数据，请先查询" /> }}
+          locale={{ emptyText: <Empty description="暂无工单数据" /> }}
         />
       
       <Divider />
       
+      <Title level={4}>过程参数</Title>
+      {renderProcessParamsTable()}
+      
+      <Divider />
+      
       <Title level={4}>结果参数</Title>
-      <Table 
-        columns={resultColumns} 
-        dataSource={resultData}
-        pagination={false}
-        size="small"
-      />
+      {renderResultParamsTable()}
     </Card>
   );
 };

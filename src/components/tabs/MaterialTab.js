@@ -59,7 +59,7 @@ const MaterialTab = ({ materialLotCode, operationName }) => {
         dataSource={materialFeedingData} 
         pagination={false}
         size="small"
-        locale={{ emptyText: <Empty description="暂无物料投入数据，请先查询" /> }}
+        locale={{ emptyText: <Empty description="暂无物料投入数据" /> }}
       />
       
       <Divider />
@@ -70,7 +70,7 @@ const MaterialTab = ({ materialLotCode, operationName }) => {
         dataSource={[]} 
         pagination={false}
         size="small"
-        locale={{ emptyText: <Empty description="暂无检验数据，请先查询" /> }}
+        locale={{ emptyText: <Empty description="暂无检验数据" /> }}
       />
     </Card>
   );
