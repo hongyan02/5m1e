@@ -9,8 +9,55 @@
 .fullscreen-modal .ant-modal-content {
   height: 100vh;
   border-radius: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .fullscreen-modal .ant-modal-header {
   border-radius: 0;
+}
+
+.fullscreen-modal .ant-modal-body {
+  flex: 1;
+  padding: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 设置Tabs组件样式 */
+.fullscreen-modal .ant-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fullscreen-modal .ant-tabs-content-holder {
+  flex: 1;
+  overflow: hidden;
+}
+
+.fullscreen-modal .ant-tabs-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.fullscreen-modal .ant-tabs-tabpane {
+  height: 100%;
+  overflow: auto; /* 只有Tab页内容可以滚动 */
+}
+
+/* 设置Card样式 */
+.fullscreen-modal .ant-card {
+  height: 100%;
+  overflow: auto; /* 卡片内容可滚动 */
+}
+
+.fullscreen-modal .ant-tabs-nav {
+  margin-bottom: 12px;
+}
+
+/* 防止模态框整体滚动 */
+.fullscreen-modal .ant-modal-wrap {
+  overflow: hidden !important;
 }

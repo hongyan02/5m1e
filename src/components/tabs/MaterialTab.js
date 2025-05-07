@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Table, Divider, Typography, Empty, Spin } from 'antd';
+import React, { useState } from 'react';
+import { Card, Table, Divider, Typography, Empty, Spin, Checkbox } from 'antd';
 import useMaterialFeeding from '../../hooks/useMaterialFeeding';
 
 const { Title } = Typography;
@@ -8,12 +8,27 @@ const MaterialTab = ({ materialLotCode, operationName }) => {
   // 使用物料投入Hook
   const { materialFeedingData, loading, error, fetchMaterialFeeding } = useMaterialFeeding();
   
+  // 添加选中行的状态
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  
   // 当组件接收到新的参数时获取数据
   React.useEffect(() => {
     if (materialLotCode && operationName) {
       fetchMaterialFeeding(materialLotCode, operationName);
     }
   }, [materialLotCode, operationName, fetchMaterialFeeding]);
+  
+  // 处理选择变化
+  const onSelectChange = (newSelectedRowKeys) => {
+    console.log('选中的行:', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+  
+  // 行选择配置
+  const rowSelection = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
   
   // 物料投入表格配置
   const materialColumns = [
@@ -55,10 +70,12 @@ const MaterialTab = ({ materialLotCode, operationName }) => {
       <Title level={4}>物料投入</Title>
       {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
       <Table 
+        rowSelection={rowSelection}
         columns={materialColumns} 
         dataSource={materialFeedingData} 
         pagination={false}
         size="small"
+        rowKey="key" // 确保每行有唯一的key
         locale={{ emptyText: <Empty description="暂无物料投入数据" /> }}
       />
       

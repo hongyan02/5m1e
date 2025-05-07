@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Card, Table, Divider, Typography, Empty, Spin } from 'antd';
+import { Card, Table, Divider, Typography, Empty, Spin, Button } from 'antd';
 import useResultParams from '../../hooks/useResultParams';
 import useProcessParams from '../../hooks/useProcessParams';
 
@@ -19,7 +19,7 @@ const MachineTab = ({ workOrderData: externalWorkOrderData, materialLotCode, ope
       fetchProcessParams(materialLotCode, operationName);
     }
   }, [materialLotCode, operationName, fetchResultParams, fetchProcessParams]);
-  
+
   // 工单信息表格配置
   const orderColumns = [
     { title: '工单编号', dataIndex: 'orderId', key: 'orderId' },
@@ -169,13 +169,29 @@ const MachineTab = ({ workOrderData: externalWorkOrderData, materialLotCode, ope
       
       <Divider />
       
-      <Title level={4}>过程参数</Title>
-      {renderProcessParamsTable()}
+      <Title level={4}>结果参数</Title>
+      {renderResultParamsTable()}
       
       <Divider />
       
-      <Title level={4}>结果参数</Title>
-      {renderResultParamsTable()}
+      <Title level={4}>过程参数</Title>
+      {renderProcessParamsTable()}
+      
+      <div style={{ textAlign: 'left', margin: '20px 0' }}>
+        <Button 
+          type="primary" 
+          size="large"
+          onClick={() => window.open(`/process-params?code=${materialLotCode}&operation=${operationName}`, '_blank')}
+          style={{ 
+            height: '48px', 
+            fontSize: '16px', 
+            padding: '0 30px',
+            borderRadius: '4px'
+          }}
+        >
+          过程参数链接
+        </Button>
+      </div>
     </Card>
   );
 };
